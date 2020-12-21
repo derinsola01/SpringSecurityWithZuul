@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: tester-discovery-client
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  datasource:
+    url: #jdbc:mysql://localhost:3306/testerdiscoverymicroservice?serverTimeZone=UTC
+    username: #derindevlocal
+    password: #ee78ac6d6c59b92a8c6d4ff04e464ac467a514ea1b170eea8c21a1879d6bf762eb481378e3b0506c82c03e35bb8c0f7f
+  jpa:
+    hibernate:
+      ddl-auto: #update
+
+server:
+  port: ${PORT:0}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+    instanceId: ${spring.application.name}:${random.int}
+    
+gateway:
+  ip: 192.168.0.20
+  
+token:
+  expiration: 2800000
+  secret: letsGoThereKilonSorTest
+  
+login:
+  url:
+    path: /test/login

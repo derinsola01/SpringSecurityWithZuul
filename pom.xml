@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.derinplayground</groupId>
+  <artifactId>derintester</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>derintester</name>
+  <description>MicroServices Discovery with Zuul and Eureka</description>
+
+  <properties>
+        <spring-boot-maven-plugin.version>2.0.1.RELEASE</spring-boot-maven-plugin.version>
+        <commons-config.version>1.10</commons-config.version>
+        <rxjava.version>1.2.10</rxjava.version>
+        <spring-boot.version>2.0.1.RELEASE</spring-boot.version>
+        <spring-cloud-dependencies.version>Finchley.SR2</spring-cloud-dependencies.version>
+        <spring-cloud-starter-config.version>2.2.3.RELEASE</spring-cloud-starter-config.version>
+        <spring-cloud-config-server.version>2.2.3.RELEASE</spring-cloud-config-server.version>
+        <spring-cloud-starter-eureka.version>1.4.7.RELEASE</spring-cloud-starter-eureka.version>
+        <spring-cloud-starter-feign.version>1.4.7.RELEASE</spring-cloud-starter-feign.version>
+        <spring-cloud-starter-hystrix.version>1.4.7.RELEASE</spring-cloud-starter-hystrix.version>
+        <spring-cloud-stream.version>3.0.6.RELEASE</spring-cloud-stream.version>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+        <module>testerDiscoveryClient</module>
+        <module>testerDiscoveryClientUsers</module>
+        <module>testerDiscoveryServer</module>
+        <module>testerDiscoveryZuulApiGateway</module>
+        <module>testerDiscoveryConfigServer</module>
+        <module>testerDiscoveryAuth</module>
+        <module>testerDiscoveryCommon</module>
+    </modules>
+    
+</project>
